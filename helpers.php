@@ -27,5 +27,5 @@ function produce(string $name, string $input, Closure $callback): void
 
 function base_path(string $path = ''): string
 {
-    return __DIR__ . ($path ? ('/'.$path) : $path);
+    return __DIR__ . ($path ? ('/' . $path) : $path);
 }
