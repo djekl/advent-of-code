@@ -14,11 +14,11 @@ function part1(string $input): int
     $total = 0;
 
     foreach ($lines as $line) {
-        $validGame = true;
-
-        if (strlen($line) < 1) {
+        if ('' === $line) {
             continue;
         }
+
+        $validGame = true;
 
         [
             $game,
@@ -62,7 +62,7 @@ function part2(string $input)
     $total = 0;
 
     foreach ($lines as $line) {
-        if (strlen($line) < 1) {
+        if ('' === $line) {
             continue;
         }
 
@@ -72,12 +72,10 @@ function part2(string $input)
             'blue' => 0,
         ];
 
-        [
-            $game,
-            $sets,
-        ] = explode(': ', $line);
+        $game = explode(': ', $line);
+        $sets = explode('; ', $game[1]);
 
-        foreach (explode('; ', $sets) as $set) {
+        foreach ($sets as $set) {
             foreach (explode(', ', $set) as $shown) {
                 [
                     $count,
