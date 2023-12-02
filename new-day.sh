@@ -73,4 +73,3 @@ open https://adventofcode.com/${YEAR}/day/${DAY}
 open -a "PhpStorm" ./${YEAR}/days/${DAY}.php
 open -a "PhpStorm" ./${YEAR}/inputs/day-${DAY}/input.txt
 open -a "PhpStorm" ./${YEAR}/inputs/day-${DAY}/part-1-example.txt
-open -a "PhpStorm" ./${YEAR}/inputs/day-${DAY}/part-2-example.txt
