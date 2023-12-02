@@ -27,17 +27,17 @@ fi
 
 # make our input file dir
 mkdir -p ./${YEAR}/inputs/day-${DAY}
-printf "\033[0;32mDIRECTORY:\033[0m ./${YEAR}/inputs/day-${DAY} \n"
+printf "\033[0;34mDIRECTORY:\033[0m ./${YEAR}/inputs/day-${DAY} \n"
 
 # create our empty input files
 touch ./${YEAR}/inputs/day-${DAY}/input.txt
-printf "\033[0;32mFILE:\033[0m ./${YEAR}/inputs/day-${DAY}/input.txt \n"
+printf "\033[0;33mFILE:\033[0m ./${YEAR}/inputs/day-${DAY}/input.txt \n"
 
 touch ./${YEAR}/inputs/day-${DAY}/part-1-example.txt
-printf "\033[0;32mFILE:\033[0m ./${YEAR}/inputs/day-${DAY}/part-1-example.txt \n"
+printf "\033[0;33mFILE:\033[0m ./${YEAR}/inputs/day-${DAY}/part-1-example.txt \n"
 
 touch ./${YEAR}/inputs/day-${DAY}/part-2-example.txt
-printf "\033[0;32mFILE:\033[0m ./${YEAR}/inputs/day-${DAY}/part-2-example.txt \n"
+printf "\033[0;33mFILE:\033[0m ./${YEAR}/inputs/day-${DAY}/part-2-example.txt \n"
 
 # generate our php file for today
 cat << EOF > ./${YEAR}/days/${DAY}.php
@@ -61,7 +61,7 @@ check('${YEAR} Day ${DAY} Part 1 Example', '${YEAR}/inputs/day-${DAY}/part-1-exa
 // check('${YEAR} Day ${DAY} Part 2 Example', '${YEAR}/inputs/day-${DAY}/part-2-example.txt', part2(...), null);
 // produce('${YEAR} Day ${DAY} Part 2', '${YEAR}/inputs/day-${DAY}/input.txt', part2(...));
 EOF
-printf "\033[0;32mFILE:\033[0m ./${YEAR}/days/${DAY}.php \n\n"
+printf "\033[0;33mFILE:\033[0m ./${YEAR}/days/${DAY}.php \n\n"
 
 # success message
 printf "\033[0;32mSUCCESS:\033[0m All files generated! \n\n"
