@@ -56,7 +56,7 @@ function part1(string $input): int
 check('2023 Day 2 Part 1 Example', '2023/inputs/day-2/part-1-example.txt', part1(...), 8);
 produce('2023 Day 2 Part 1', '2023/inputs/day-2/input.txt', part1(...));
 
-function part2(string $input)
+function part2(string $input): int
 {
     $lines = explode(PHP_EOL, $input);
     $total = 0;
