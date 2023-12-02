@@ -1,6 +1,6 @@
 <?php
 
-namespace Day1;
+namespace AOC2023\Day1;
 
 function part1(string $input): int
 {
@@ -26,8 +26,8 @@ function part1(string $input): int
     return array_sum($values);
 }
 
-check('Day 1 Part 1 Example', '2023/inputs/day-1/part-1-example.txt', part1(...), 142);
-produce('Day 1 Part 1', '2023/inputs/day-1/input.txt', part1(...));
+check('2023 Day 1 Part 1 Example', '2023/inputs/day-1/part-1-example.txt', part1(...), 142);
+produce('2023 Day 1 Part 1', '2023/inputs/day-1/input.txt', part1(...));
 
 function part2(string $input): int
 {
@@ -82,5 +82,5 @@ function part2(string $input): int
     return array_sum($values);
 }
 
-check('Day 1 Part 2 Example', '2023/inputs/day-1/part-2-example.txt', part2(...), 281);
-produce('Day 1 Part 2', '2023/inputs/day-1/input.txt', part2(...));
+check('2023 Day 1 Part 2 Example', '2023/inputs/day-1/part-2-example.txt', part2(...), 281);
+produce('2023 Day 1 Part 2', '2023/inputs/day-1/input.txt', part2(...));
