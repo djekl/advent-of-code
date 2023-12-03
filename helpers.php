@@ -22,7 +22,7 @@ function produce(string $name, string $input, Closure $callback): void
 {
     $result = run($input, $callback);
 
-    echo "{$name} produced the answer {$result}.\n";
+    echo "{$name} produced the answer {$result}\n";
 }
 
 function base_path(string $path = ''): string
