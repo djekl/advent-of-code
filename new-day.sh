@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 # set the year
-YEAR=$(date +%Y)
+YEAR=$1
+[[ $YEAR =~ ^[0-9]+$ ]] || { YEAR=$(date +%Y); }
 
 # ask for the day number
 # and validate this is a valid number
@@ -40,6 +41,7 @@ touch ./${YEAR}/inputs/day-${DAY}/part-2-example.txt
 printf "\033[0;33mFILE:\033[0m ./${YEAR}/inputs/day-${DAY}/part-2-example.txt \n"
 
 # generate our php file for today
+mkdir -p ./${YEAR}/days/
 cat << EOF > ./${YEAR}/days/${DAY}.php
 <?php
 
