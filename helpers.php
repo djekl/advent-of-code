@@ -13,7 +13,9 @@ function check(string $name, string $input, Closure $callback, mixed $expected)
 
 function run(string $input, Closure $callback): mixed
 {
-    $input = file_get_contents($input);
+    if (file_exists($input)) {
+        $input = file_get_contents($input);
+    }
 
     return $callback($input);
 }
