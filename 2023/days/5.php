@@ -19,31 +19,29 @@ function part1(string $input): int
 
     $minLocation = PHP_INT_MAX;
 
-    foreach ($seeds as $seed) {
-        $value = $seed;
-        foreach (array_keys($maps) as $src) {
-            $value = (function (int $value, array $map): int {
-                foreach ($map as $line) {
-                    [
-                        $destStart,
-                        $srcStart,
-                        $length,
-                    ] = explode(' ', $line);
+    $seed = min($seeds);
+    $value = $seed;
 
-                    if ($value >= (int) $srcStart && $value < (int) $srcStart + (int) $length) {
-                        return (int) $destStart + ($value - (int) $srcStart);
-                    }
+    foreach (array_keys($maps) as $src) {
+        $value = (function (int $value, array $map): int {
+            foreach ($map as $line) {
+                [
+                    $destStart,
+                    $srcStart,
+                    $length,
+                ] = explode(' ', $line);
+
+                if ($value >= (int) $srcStart && $value < (int) $srcStart + (int) $length) {
+                    return (int) $destStart + ($value - (int) $srcStart);
                 }
+            }
 
-                return $value;
-            })(
-                $value, $maps[$src]);
-        }
-
-        $minLocation = min($minLocation, $value);
+            return $value;
+        })(
+            $value, $maps[$src]);
     }
 
-    return $minLocation;
+    return min($minLocation, $value);
 }
 
 check('2023 Day 5 Part 1 Example', '2023/inputs/day-5/part-1-example.txt', part1(...), 35);
@@ -64,8 +62,48 @@ function part2(string $input): int
     }
 
     $minLocation = PHP_INT_MAX;
+    $minSeed = PHP_INT_MAX;
 
-    for ($i = 0, $iMax = count($seedRanges); $i < $iMax; $i += 2) {
+    foreach (array_chunk($seedRanges, 2) as $seedRange) {
+        [
+            $start,
+            $length,
+        ] = $seedRange;
+
+        if ($minSeed > $start) {
+            $minSeed = $start;
+        } else {
+            continue;
+        }
+
+        for ($i = 0; $i < $length; $i++) {
+            $seed = $start + $i;
+            $value = $seed;
+
+            foreach (array_keys($maps) as $src) {
+                $value = (function (int $value, array $map): int {
+                    foreach ($map as $line) {
+                        [
+                            $destStart,
+                            $srcStart,
+                            $length,
+                        ] = explode(' ', $line);
+
+                        if ($value >= (int) $srcStart && $value < (int) $srcStart + (int) $length) {
+                            return (int) $destStart + ($value - $srcStart);
+                        }
+                    }
+
+                    return $value;
+                })(
+                    $value, $maps[$src]);
+            }
+
+            $minLocation = min($minLocation, $value);
+        }
+    }
+
+    /*for ($i = 0, $iMax = count($seedRanges); $i < $iMax; $i += 2) {
         $start = $seedRanges[$i];
         $length = $seedRanges[$i + 1];
 
@@ -94,7 +132,7 @@ function part2(string $input): int
 
             $minLocation = min($minLocation, $value);
         }
-    }
+    }*/
 
     return $minLocation;
 }
