@@ -4,17 +4,17 @@ namespace AOC2023\Day9;
 
 function extrapolate($array): int
 {
-    $allZero = static function(array $array, int $value): bool {
-        foreach ($array as $item) {
-            if ($item !== $value) {
-                return false;
-            }
-        }
-
-        return true;
+    $all = static function($array, $value): bool {
+        return array_reduce(
+            $array,
+            static function($carry, $item) use ($value): bool {
+                return $carry && ($item === $value);
+            },
+            true,
+        );
     };
 
-    if ($allZero($array, 0)) {
+    if ($all($array, 0)) {
         return 0;
     }
 
