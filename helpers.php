@@ -1,6 +1,6 @@
 <?php
 
-function check(string $name, string $input, Closure $callback, mixed $expected)
+function check(string $name, string|array $input, Closure $callback, mixed $expected): void
 {
     $result = run($input, $callback);
 
@@ -11,16 +11,18 @@ function check(string $name, string $input, Closure $callback, mixed $expected)
     }
 }
 
-function run(string $input, Closure $callback): mixed
+function run(string|array $input, Closure $callback): mixed
 {
-    if (file_exists($input)) {
-        $input = file_get_contents($input);
+    if (is_array($input) && file_exists($input[0])) {
+        $input[0] = file_get_contents($input[0]);
+    } elseif (file_exists($input)) {
+        $input = [file_get_contents($input)];
     }
 
-    return $callback($input);
+    return $callback(...$input);
 }
 
-function produce(string $name, string $input, Closure $callback): void
+function produce(string $name, string|array $input, Closure $callback): void
 {
     $result = run($input, $callback);
 
