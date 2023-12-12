@@ -11,3 +11,8 @@ if (! file_exists(base_path("$task.php"))) {
 }
 
 require_once base_path("$task.php");
+
+try {
+    $redis = redisInstance();
+    $redis->flushAll();
+} catch (Exception $e) {}

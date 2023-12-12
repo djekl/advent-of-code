@@ -8,6 +8,7 @@
         "symfony/var-dumper": "^7.0"
     },
     "require": {
-        "ext-gmp": "*"
+        "ext-gmp": "*",
+        "ext-redis": "*"
     }
 }

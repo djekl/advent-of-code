@@ -33,3 +33,22 @@ function base_path(string $path = ''): string
 {
     return __DIR__ . ($path ? ('/' . $path) : $path);
 }
+
+/**
+ * @throws RedisException
+ */
+function redisInstance(): Redis
+{
+    static $redis;
+
+    if (! $redis) {
+        $redis = new Redis();
+
+        $redis->connect(
+            host: '127.0.0.1',
+            port: 6379,
+        );
+    }
+
+    return $redis;
+}
