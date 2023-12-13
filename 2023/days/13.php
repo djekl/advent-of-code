@@ -12,7 +12,7 @@ function part1(string $input): int
         ),
     );
 
-    $findReflectionPoint = static function(array $group): int {
+    $findReflectionPoint = static function (array $group): int {
         $count = count($group);
 
         for ($row = 1; $row < $count; $row++) {
@@ -57,7 +57,7 @@ function part2(string $input): int
         ),
     );
 
-    $findReflectionPoint = static function(array $group): int {
+    $findReflectionPoint = static function (array $group): int {
         $count = count($group);
 
         for ($row = 1; $row < $count; $row++) {
@@ -70,11 +70,13 @@ function part2(string $input): int
             $diff = 0;
 
             foreach (array_map(null, $above, $below) as [$x, $y]) {
-                $diff += array_sum(array_map(
-                    static fn ($a, $b) => $a === $b ? 0 : 1,
-                    str_split($x ?? ''),
-                    str_split($y ?? ''),
-                ));
+                $diff += array_sum(
+                    array_map(
+                        static fn ($a, $b) => $a === $b ? 0 : 1,
+                        str_split($x ?? ''),
+                        str_split($y ?? ''),
+                    )
+                );
             }
 
             if ($diff === 1) {
