@@ -148,6 +148,8 @@ produce('2023 Day 17 Part 1', '2023/inputs/day-17/input.txt', part1(...));
 
 function part2(string $input): int
 {
+    ini_set('memory_limit', '8G');
+
     $grid = array_map('str_split', explode(PHP_EOL, trim($input, PHP_EOL)));
 
     try {
