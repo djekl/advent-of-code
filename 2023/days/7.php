@@ -70,7 +70,7 @@ function part1($input)
 }
 
 check('2023 Day 7 Part 1 Example', '2023/inputs/day-7/part-1-example.txt', part1(...), 6440);
-produce('2023 Day 7 Part 1', '2023/inputs/day-7/input.txt', part1(...));
+// produce('2023 Day 7 Part 1', '2023/inputs/day-7/input.txt', part1(...));
 
 function part2(string $input): int
 {
@@ -154,4 +154,4 @@ function part2(string $input): int
 }
 
 check('2023 Day 7 Part 2 Example', '2023/inputs/day-7/part-2-example.txt', part2(...), 5905);
-produce('2023 Day 7 Part 2', '2023/inputs/day-7/input.txt', part2(...));
+// produce('2023 Day 7 Part 2', '2023/inputs/day-7/input.txt', part2(...));

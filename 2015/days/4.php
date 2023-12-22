@@ -20,7 +20,7 @@ function part1(string $input): int
 
 check('2015 Day 4 Part 1 Example', 'abcdef', part1(...), 609043);
 check('2015 Day 4 Part 1 Example', 'pqrstuv', part1(...), 1048970);
-produce('2015 Day 4 Part 1', '2015/inputs/day-4/input.txt', part1(...));
+// produce('2015 Day 4 Part 1', '2015/inputs/day-4/input.txt', part1(...));
 
 function part2(string $input): int
 {
@@ -38,4 +38,4 @@ function part2(string $input): int
     }
 }
 
-produce('2015 Day 4 Part 2', '2015/inputs/day-4/input.txt', part2(...));
+// produce('2015 Day 4 Part 2', '2015/inputs/day-4/input.txt', part2(...));

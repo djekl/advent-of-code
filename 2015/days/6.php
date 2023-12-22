@@ -48,7 +48,7 @@ function part1(string $input): int
 }
 
 check('2015 Day 6 Part 1 Example', '2015/inputs/day-6/part-1-example.txt', part1(...), 998996);
-produce('2015 Day 6 Part 1', '2015/inputs/day-6/input.txt', part1(...));
+// produce('2015 Day 6 Part 1', '2015/inputs/day-6/input.txt', part1(...));
 
 function part2(string $input): int
 {
@@ -96,4 +96,4 @@ function part2(string $input): int
 }
 
 check('2015 Day 6 Part 2 Example', '2015/inputs/day-6/part-2-example.txt', part2(...), 2000001);
-produce('2015 Day 6 Part 2', '2015/inputs/day-6/input.txt', part2(...));
+// produce('2015 Day 6 Part 2', '2015/inputs/day-6/input.txt', part2(...));

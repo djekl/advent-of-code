@@ -34,7 +34,7 @@ function part1(string $input): int
 
 check('2023 Day 8 Part 1 Example 1', '2023/inputs/day-8/part-1-example.txt', part1(...), 2);
 check('2023 Day 8 Part 1 Example 2', '2023/inputs/day-8/part-1-example-2.txt', part1(...), 6);
-produce('2023 Day 8 Part 1', '2023/inputs/day-8/input.txt', part1(...));
+// produce('2023 Day 8 Part 1', '2023/inputs/day-8/input.txt', part1(...));
 
 function part2(string $input): int
 {
@@ -80,4 +80,4 @@ function part2(string $input): int
 }
 
 check('2023 Day 8 Part 2 Example', '2023/inputs/day-8/part-2-example.txt', part2(...), 6);
-produce('2023 Day 8 Part 2', '2023/inputs/day-8/input.txt', part2(...));
+// produce('2023 Day 8 Part 2', '2023/inputs/day-8/input.txt', part2(...));

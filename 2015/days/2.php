@@ -39,7 +39,7 @@ function part1(string $input): int
 
 check('2015 Day 2 Part 1 Example', '2x3x4', part1(...), 58);
 check('2015 Day 2 Part 1 Example', '1x1x10', part1(...), 43);
-produce('2015 Day 2 Part 1', '2015/inputs/day-2/input.txt', part1(...));
+// produce('2015 Day 2 Part 1', '2015/inputs/day-2/input.txt', part1(...));
 
 function part2(string $input): int
 {
@@ -78,4 +78,4 @@ function part2(string $input): int
 
 check('2015 Day 2 Part 2 Example', '2x3x4', part2(...), 34);
 check('2015 Day 2 Part 2 Example', '1x1x10', part2(...), 14);
-produce('2015 Day 2 Part 2', '2015/inputs/day-2/input.txt', part2(...));
+// produce('2015 Day 2 Part 2', '2015/inputs/day-2/input.txt', part2(...));

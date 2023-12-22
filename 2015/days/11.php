@@ -65,7 +65,7 @@ function part1(string $input): string
 }
 
 check('2015 Day 11 Part 1 Example', '2015/inputs/day-11/input.txt', part1(...), 'hepxxyzz');
-produce('2015 Day 11 Part 1', '2015/inputs/day-11/input.txt', part1(...));
+// produce('2015 Day 11 Part 1', '2015/inputs/day-11/input.txt', part1(...));
 
 function part2(string $input): string
 {
@@ -73,4 +73,4 @@ function part2(string $input): string
 }
 
 check('2015 Day 11 Part 2 Example', '2015/inputs/day-11/input.txt', part2(...), 'heqaabcc');
-produce('2015 Day 11 Part 2', '2015/inputs/day-11/input.txt', part2(...));
+// produce('2015 Day 11 Part 2', '2015/inputs/day-11/input.txt', part2(...));

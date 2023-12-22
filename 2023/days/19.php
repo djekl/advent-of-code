@@ -73,7 +73,7 @@ function part1(string $input): int
 
 check('2023 Day 19 Part 1 Example', '2023/inputs/day-19/part-1-example.txt', part1(...), 19114);
 check('2023 Day 19 Part 1 Example', '2023/inputs/day-19/input.txt', part1(...), 376008);
-produce('2023 Day 19 Part 1', '2023/inputs/day-19/input.txt', part1(...));
+// produce('2023 Day 19 Part 1', '2023/inputs/day-19/input.txt', part1(...));
 
 function totalCount(array $workflows, $ranges, $name = "in") {
     if ('R' === $name) {
@@ -159,4 +159,4 @@ function part2(string $input): int
 
 check('2023 Day 19 Part 2 Example', '2023/inputs/day-19/part-2-example.txt', part2(...), 167409079868000);
 check('2023 Day 19 Part 2 Example', '2023/inputs/day-19/input.txt', part2(...), 124078207789312);
-produce('2023 Day 19 Part 2', '2023/inputs/day-19/input.txt', part2(...));
+// produce('2023 Day 19 Part 2', '2023/inputs/day-19/input.txt', part2(...));

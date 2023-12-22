@@ -30,7 +30,7 @@ function part1(string|array|object $input): int|string
 }
 
 check('2015 Day 12 Part 1 Example', '2015/inputs/day-12/input.txt', part1(...), 119433);
-produce('2015 Day 12 Part 1', '2015/inputs/day-12/input.txt', part1(...));
+// produce('2015 Day 12 Part 1', '2015/inputs/day-12/input.txt', part1(...));
 
 function part2(string|array|object $input): int|string
 {
@@ -74,4 +74,4 @@ function part2(string|array|object $input): int|string
 }
 
 check('2015 Day 12 Part 2 Example', '2015/inputs/day-12/input.txt', part2(...), 68466);
-produce('2015 Day 12 Part 2', '2015/inputs/day-12/input.txt', part2(...));
+// produce('2015 Day 12 Part 2', '2015/inputs/day-12/input.txt', part2(...));

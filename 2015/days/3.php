@@ -40,7 +40,7 @@ function part1(string $input): int
 check('2015 Day 3 Part 1 Example', '>', part1(...), 2);
 check('2015 Day 3 Part 1 Example', '^>v<', part1(...), 4);
 check('2015 Day 3 Part 1 Example', '^v^v^v^v^v', part1(...), 2);
-produce('2015 Day 3 Part 1', '2015/inputs/day-3/input.txt', part1(...));
+// produce('2015 Day 3 Part 1', '2015/inputs/day-3/input.txt', part1(...));
 
 function part2(string $input): int
 {
@@ -100,4 +100,4 @@ function part2(string $input): int
 check('2015 Day 3 Part 2 Example', '^v', part2(...), 3);
 check('2015 Day 3 Part 2 Example', '^>v<', part2(...), 3);
 check('2015 Day 3 Part 2 Example', '^v^v^v^v^v', part2(...), 11);
-produce('2015 Day 3 Part 2', '2015/inputs/day-3/input.txt', part2(...));
+// produce('2015 Day 3 Part 2', '2015/inputs/day-3/input.txt', part2(...));
