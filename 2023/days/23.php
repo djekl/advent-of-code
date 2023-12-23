@@ -22,11 +22,8 @@ function depthFirstSearch($grid, $visited, $start, $end, $steps, $maxSteps = 0, 
         if (
             isset($grid[$nx][$ny])
             && ! $visited[$nx][$ny]
-            && (
-                $part2
-                    ? $grid[$nx][$ny] != '#'
-                    : in_array($grid[$x][$y], ['.', $dir], true)
-            )
+            && $grid[$nx][$ny] != '#'
+            && ($part2 || in_array($grid[$x][$y], ['.', $dir], true))
         ) {
             $visited[$nx][$ny] = true;
 
