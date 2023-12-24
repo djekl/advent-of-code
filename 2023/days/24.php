@@ -62,7 +62,7 @@ function part1(string $input, int $min, int $max): int
 }
 
 check('2023 Day 24 Part 1 Example', ['2023/inputs/day-24/part-1-example.txt', 7, 27], part1(...), 2);
-produce('2023 Day 24 Part 1', ['2023/inputs/day-24/input.txt', 200000000000000, 400000000000000], part1(...));
+// produce('2023 Day 24 Part 1', ['2023/inputs/day-24/input.txt', 200000000000000, 400000000000000], part1(...));
 
 function part2(string $input): int
 {
