@@ -2,7 +2,7 @@
 
 namespace AOC2024\Day1;
 
-function part1(string $input): int
+function getValues(string $input): array
 {
     $leftList = [];
     $rightList = [];
@@ -21,6 +21,13 @@ function part1(string $input): int
 
     sort($leftList);
     sort($rightList);
+
+    return [$leftList, $rightList];
+}
+
+function part1(string $input): int
+{
+    [$leftList, $rightList] = getValues($input);
 
     $totalDistance = 0;
 
@@ -38,23 +45,7 @@ produce('2024 Day 1 Part 1', '2024/inputs/day-1/input.txt', part1(...));
 
 function part2(string $input): int
 {
-    $leftList = [];
-    $rightList = [];
-
-    array_map(
-        static function ($line) use (&$leftList, &$rightList) {
-            $regex = '/\d+/ui';
-
-            preg_match_all($regex, $line, $matches);
-
-            $leftList[] = $matches[0][0];
-            $rightList[] = $matches[0][1];
-        },
-        explode(PHP_EOL, rtrim($input, PHP_EOL)),
-    );
-
-    sort($leftList);
-    sort($rightList);
+    [$leftList, $rightList] = getValues($input);
 
     $totalSimilarityScore = 0;
 
