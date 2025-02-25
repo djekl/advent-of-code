@@ -22,12 +22,18 @@ function getValues(string $input): array
     sort($leftList);
     sort($rightList);
 
-    return [$leftList, $rightList];
+    return [
+        $leftList,
+        $rightList,
+    ];
 }
 
 function part1(string $input): int
 {
-    [$leftList, $rightList] = getValues($input);
+    [
+        $leftList,
+        $rightList,
+    ] = getValues($input);
 
     $totalDistance = 0;
 
@@ -45,7 +51,10 @@ produce('2024 Day 1 Part 1', '2024/inputs/day-1/input.txt', part1(...));
 
 function part2(string $input): int
 {
-    [$leftList, $rightList] = getValues($input);
+    [
+        $leftList,
+        $rightList,
+    ] = getValues($input);
 
     $totalSimilarityScore = 0;
 
